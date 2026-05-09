@@ -31,7 +31,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --config.allow-builds=*
 
       - name: Run ESLint
         run: pnpm run lint
@@ -72,7 +72,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --config.allow-builds=*
 
       - name: Replace ROUTES_CONFIG in wrangler.toml
         env:
